@@ -1,2 +1,2 @@
 # magento2_code
-Modulos creados para megento2
+Modulos creados para magento2

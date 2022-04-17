@@ -1,6 +1,6 @@
 <?php
 namespace Actecnology\HelloWorld\Block;
-class Index extends \Magento\Framework\View\Element\Template
+class Message extends \Magento\Framework\View\Element\Template
 {
     public function __construct(\Magento\Framework\View\Element\Template\Context $context)
     {

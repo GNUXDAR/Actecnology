@@ -17,7 +17,9 @@ namespace Actecnology\HelloWorld\Setup;
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
 {
 
-	public function install(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
+	public function install(
+		\Magento\Framework\Setup\SchemaSetupInterface $setup, 
+		\Magento\Framework\Setup\ModuleContextInterface $context)
 	{
 		$installer = $setup;
 		$installer->startSetup();
@@ -105,10 +107,10 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
 				$installer->getTable('actecnology_helloworld_post'),
 				$setup->getIdxName(
 					$installer->getTable('actecnology_helloworld_post'),
-					['name','url_key','post_content','tags','featured_image'],
+					['name','url_key','post_content','tags','featured_image', 'author'],
 					\Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
 				),
-				['name','url_key','post_content','tags','featured_image'],
+				['name','url_key','post_content','tags','featured_image', 'author'],
 				\Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
 			);
 		}

@@ -1,4 +1,5 @@
 <?php
+
 namespace Actecnology\HelloWorld\Block;
 class Message extends \Magento\Framework\View\Element\Template
 {

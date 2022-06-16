@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Actecnology Team
+ * @copyright Copyright (c) 2016 Actecnology (https://www.actecnologies.com/)
+ * @package Actecnology_Autologin
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="admin_login" />
+    <body>
+        <referenceContainer name="login.content">
+            <block class="Magento\Backend\Block\Template" name="actecnology_autologin" template="Actecnology_Autologin::autologin.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

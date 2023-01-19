@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Actecnology Team
+ * @copyright Copyright (c) 2016 Actecnology (https://actecnologies.com/)
+ * @package Actecnology_Autologin
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Actecnology_Autologin" setup_version="1.0.0">
+    </module>
+</config>

@@ -2,6 +2,6 @@ Esta es una prueba para mejorar las habilidades del desarrollo de modulos en Mag
 aumentar mis habilidades y eficiencia en el trabajo.
 
 
-"Yokoi Kenji: "La disciplina, tarde o temprano vencerá la inteligencia"
+"La disciplina, tarde o temprano vencerá la inteligencia"
 
 yokoi kenji

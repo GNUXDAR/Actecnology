@@ -1,7 +1,7 @@
 # magento2_code
 Modulos creados para magento2
 
-[autologin](../tree/main/Autologin)  Se autologues sin tener que escribir la contraseña
+[Autologin](https://github.com/GNUXDAR/magento2_code/tree/main/Autologin)  Se autologues sin tener que escribir la contraseña
 
 [HelloWorld](https://github.com/GNUXDAR/magento2_code/tree/main/HelloWorld)  Modulo de prueba
 

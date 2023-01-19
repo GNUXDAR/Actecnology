@@ -1,4 +1,7 @@
-Esta es una prueba para mejorar las ahbilidades del desarrollo de modulos en Magento2.
-aumentar mis skill y eficiencia en el trabajo.
+Esta es una prueba para mejorar las habilidades del desarrollo de modulos en Magento2.
+aumentar mis habilidades y eficiencia en el trabajo.
 
-"La disciplina gana a ala inteligencia"
+
+"Yokoi Kenji: "La disciplina, tarde o temprano vencerá la inteligencia"
+
+yokoi kenji

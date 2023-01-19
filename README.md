@@ -1,6 +1,10 @@
 # magento2_code
-Modulos creados para magento2
 
+    "La disciplina, tarde o temprano vencerá la inteligencia" Yokoi Kenji
+
+
+
+Modulos creados con 💗 para magento2
 Magento ver. 2.4.3-p1
 
 [Autologin](https://github.com/GNUXDAR/magento2_code/tree/main/Autologin)  Se autologues sin tener que escribir la contraseña

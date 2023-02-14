@@ -2,6 +2,9 @@
 
 namespace Actecnology\ModuloBasico\Controller\Index;
 
+use \Magento\Framework\App\Action\Context;
+use \Magento\Framework\View\Result\PageFactory;
+
 class Index extends \Magento\Framework\App\Action\Action
 {
     /**
@@ -11,8 +14,8 @@ class Index extends \Magento\Framework\App\Action\Action
     protected $resulPageFactory;
 
     public function __construct(
-        \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $resulPageFactory
+        Context $context,
+        PageFactory $resulPageFactory
     ){
         $this->resulPageFactory = $resulPageFactory;
         parent::__construct($context);

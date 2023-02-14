@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add 
+            id="Actecnology_ModuloBasico::actecnologybackend" 
+            title="ActecnologyBackend Modulo Básico" 
+            module="Actecnology_ModuloBasico" 
+            sortOrder="50" 
+            resource="Actecnology_ModuloBasico::actecnologybackend" 
+            parent="Magento_Backend::marketing"
+        />
+		<add 
+            id="Actecnology_ModuloBasico::index" 
+            title="ActecnologyBackend Index" 
+            module="Actecnology_ModuloBasico" 
+            sortOrder="51" 
+            resource="Actecnology_ModuloBasico::index" 
+            parent="Actecnology_ModuloBasico::actecnologybackend" 
+            action="actecnologyadmin/index/"
+        />
+	</menu>
+</config>

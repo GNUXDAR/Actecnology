@@ -18,5 +18,14 @@
             parent="Actecnology_ModuloBasico::actecnologybackend" 
             action="actecnologyadmin/index/"
         />
+        <add
+        id="Actecnology_ModuloBasico::subscription"
+        title="Subscription"
+        module="Actecnology_ModuloBasico"
+        sortOrder="52"
+        parent="Actecnology_ModuloBasico::actecnologybackend"
+        action="actecnologyadmin/subscription/"
+        resource="Actecnology_ModuloBasico::subscription"
+    />
 	</menu>
 </config>

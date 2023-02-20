@@ -6,6 +6,7 @@ namespace Actecnology\ModuloBasico\Setup;
 use Magento\Framework\Setup\UpgradeSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
+use Magento\Framework\DB\Ddl\Table;
 
 class UpgradeSchema implements UpgradeSchemaInterface
 {
@@ -23,7 +24,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
               $installer->getTable('actecnology_subscription')
             )->addColumn(
                 'subscription_id',
-                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                Table::TYPE_INTEGER,
                 null,
                 [
                     'identity' => true,
@@ -34,40 +35,40 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 'Subscription Id'
             )->addColumn(
                 'created_at',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
+                Table::TYPE_TIMESTAMP,
                 null,
                 [
                     'nullable' => false,
-                    'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT
+                    'default' => Table::TIMESTAMP_INIT
                 ],
                 'Created at'
             )->addColumn(
                 'update_at',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
+                Table::TYPE_TIMESTAMP,
                 null,
                 [],
                 'Updated at'
             )->addColumn(
                 'firstname',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                Table::TYPE_TEXT,
                 64,
                 ['nullable'=>false],
                 'First name'
             )->addColumn(
                 'lastname',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                Table::TYPE_TEXT,
                 64,
                 ['nullable'=>false],
                 'Last name'
             )->addColumn(
                 'email',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                Table::TYPE_TEXT,
                 255,
                 ['nullable'=>false],
                 'Email address'
             )->addColumn(
                 'status',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                Table::TYPE_TEXT,
                 255,
                 [
                     'nullable' => false,
@@ -76,7 +77,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 'Status'
             )->addColumn(
                 'message',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                Table::TYPE_TEXT,
                 '64k',
                 [
                     'unsigned' => true,

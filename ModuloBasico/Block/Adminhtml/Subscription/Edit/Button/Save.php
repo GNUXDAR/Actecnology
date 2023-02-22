@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Actecnology\ModuloBasico\Block\Adminhtml\Subscription\Edit\Button;

@@ -3,9 +3,10 @@
     <update handle="styles" />
     <body>
         <referenceContainer name="content">
-            <block class="Actecnology\ModuloBasico\Block\Adminhtml\Subscription" name="adminhtml.block.actecnologybackend.subscription.container">
+            <!-- <block class="Actecnology\ModuloBasico\Block\Adminhtml\Subscription" name="adminhtml.block.actecnologybackend.subscription.container">
                 <block class="Actecnology\ModuloBasico\Block\Adminhtml\Subscription\Grid" name="adminhtml.block.actecnologybackend.subscription.grid" as="grid" />
-            </block>
+            </block> -->
+            <uiComponent name="actecnology_modulobasico_subscription_listing" />
         </referenceContainer>
     </body>
 </page>

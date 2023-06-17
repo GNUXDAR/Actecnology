@@ -13,4 +13,4 @@ Magento ver. 2.4.3-p1
 
 [ModuloBasico](https://github.com/GNUXDAR/magento2_code/tree/main/ModuloBasico)  Modulo para mostrar una page desde un block con su URL  
 
-[GetProvider/](https://github.com/GNUXDAR/magento2_code/tree/main/GetProvider/)  Modulo para consumir una API de algun proveedor 
+[GetProvider](https://github.com/GNUXDAR/magento2_code/tree/main/GetProvider)  Modulo para consumir una API de algun proveedor 

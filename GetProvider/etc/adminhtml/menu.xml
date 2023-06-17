@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add 
+            id="Actecnology_GetProvider::actecnologybackend" 
+            title="Seller Provider" 
+            module="Actecnology_GetProvider" 
+            sortOrder="60"
+            parent="Actecnology_Core::menu"
+            resource="Actecnology_GetProvider::actecnologybackend" 
+        />
+		<add 
+            id="Actecnology_GetProvider::index" 
+            title="Index" 
+            module="Actecnology_GetProvider" 
+            sortOrder="61" 
+            parent="Actecnology_GetProvider::actecnologybackend" 
+            action="actecnology_getprovider/index/"
+            resource="Actecnology_GetProvider::index"
+        />
+	</menu>
+</config>

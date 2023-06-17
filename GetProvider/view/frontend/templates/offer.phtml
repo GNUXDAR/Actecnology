@@ -1,0 +1,24 @@
+<div class="offer-container">
+    <h2>Ofertas disponibles</h2>
+    <?php if ($offers && count($offers) > 0) : ?>
+        <ul>
+            <?php foreach ($offers as $offer) : ?>
+                <li>
+                    <h3>ID: <?php echo $offer['id']; ?></h3>
+                    <p>Precio: <?php echo $offer['price']; ?></p>
+                    <p>Stock: <?php echo $offer['stock']; ?></p>
+                    <p>Precio de envío: <?php echo $offer['shipping_price']; ?></p>
+                    <p>Fecha de entrega: <?php echo $offer['delivery_date']; ?></p>
+                    <p>Puede ser devuelto: <?php echo $offer['can_be_refunded'] ? 'Sí' : 'No'; ?></p>
+                    <p>Estado: <?php echo $offer['status']; ?></p>
+                    <p>Garantía: <?php echo $offer['guarantee'] ? 'Sí' : 'No'; ?></p>
+                    <p>Vendedor: <?php echo $offer['seller']['name']; ?></p>
+                    <p>Calificación del vendedor: <?php echo $offer['seller']['qualification']; ?></p>
+                    <p>Cantidad de calificaciones: <?php echo $offer['seller']['reviews_quantity']; ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else : ?>
+        <p>No hay ofertas disponibles en este momento.</p>
+    <?php endif; ?>
+</div>

@@ -23,11 +23,11 @@ class OfferController extends Action
         // die("hola");
         $sku = $this->getRequest()->getParam('sku');
 
-        // Aquí realizas la llamada a la API del proveedor utilizando la librería de cURL o cualquier otra librería que prefieras
+        // Aquí realiza la llamada a la API del proveedor utilizando la librería cURL
 
-        // Ejemplo de llamada a la API utilizando cURL
+        // Llamada a la API utilizando cURL
         $providerUrl = 'http://127.0.0.1:8000/';
-        $apiUrl = $providerUrl . '/getAllSkuOffers/3' //. $sku;
+        $apiUrl = $providerUrl . '/getAllSkuOffers/' . $sku;
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $apiUrl);

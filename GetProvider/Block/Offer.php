@@ -22,10 +22,25 @@ class Offer extends Template
     {
         $offers = $this->providerAPI->getAllSkuOffers($sku);
 
-        // Implementa aquí la lógica para determinar la mejor oferta
-        // Puedes utilizar los datos de $offers para comparar precios, disponibilidad, calificaciones, etc.
+        // Obtener todas las ofertas del proveedor
+        $allOffers = $this->providerAPI->getAllOffers($sku);
+
+        // Variables para almacenar la mejor oferta
+        $bestOfferPrice = null;
+        $bestOffer = null;
+
+        foreach ($allOffers as $offer) {
+            // Verificar si la oferta es la mejor hasta el momento
+            if ($bestOfferPrice === null || $offer['price'] < $bestOfferPrice) {
+                $bestOfferPrice = $offer['price'];
+                $bestOffer = $offer;
+            }
+        }
+        // se puede utilizar los datos de $offers para comparar precios, disponibilidad, calificaciones, etc.
 
         // Devuelve la mejor oferta encontrada
         return $bestOffer;
+    }
+
     }
 }

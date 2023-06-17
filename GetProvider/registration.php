@@ -1,7 +1,7 @@
 <?php
 /**
+ * @author Actecnology Team (https://actecnology.com/)
  * Copyright ©  All rights reserved.
- * See COPYING.txt for license details.
  * Arturo Cabrera
  */
 

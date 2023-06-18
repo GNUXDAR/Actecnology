@@ -11,6 +11,7 @@ use \Magento\Framework\App\Action\Context;
 use \Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Actecnology\GetProvider\Model\ProviderAPI;
+use Actecnology\GetProvider\Model\BestOfferService;
 
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -21,14 +22,17 @@ class Index extends \Magento\Framework\App\Action\Action
     
     protected $resultPageFactory;
     protected $providerAPI;
+    // protected $bestOfferService;
 
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         ProviderAPI $providerAPI
+        // BestOfferService $bestOfferService
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->providerAPI = $providerAPI;
+        // $this->bestOfferService = $bestOfferService;
         parent::__construct($context);
     }
 
@@ -41,14 +45,22 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         $resultPage = $this->resultPageFactory->create();
 
-        // Obtener los datos de la API
+        // Obtener la mejor oferta utilizando el servicio BestOfferService
         $sku = '3'; // SKU del producto a consultar
-        $offers = $this->providerAPI->getAllSkuOffers($sku);
+        $offers = $this->providerAPI->getBestOffer($sku);
+
+        // Obtener los datos de la API
+        // $sku = '3'; // SKU del producto a consultar
+        // $offers = $this->providerAPI->getAllSkuOffers($sku);
 
         // Pasar los datos a la vista
         // var_dump($offers);
-        $resultPage->getConfig()->getTitle()->set('Ofertas'); // Establecer el título de la página
-        $resultPage->getLayout()->getBlock('actecnology.getprovider.offer')->setData('offers', $offers); // Pasar los datos de las ofertas al bloque de la vista
+        // $resultPage->getConfig()->getTitle()->set('Ofertas'); // Establecer el título de la página
+        // $resultPage->getLayout()->getBlock('actecnology.getprovider.offer')->setData('offers', $offers); // Pasar los datos de las ofertas al bloque de la vista
+
+        $resultPage->getConfig()->getTitle()->set('Ofertas');
+        $resultPage->getLayout()->getBlock('actecnology.getprovider.offer')->setData('offers', $offers);
+
 
         return $resultPage;
     }

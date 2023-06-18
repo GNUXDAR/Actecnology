@@ -32,6 +32,35 @@ class ProviderAPI
         return $offers;
     }
 
+    // Mejor Oferta
+    public function getBestOffer($sku)
+    {
+        // Obtener las ofertas del proveedor utilizando la instancia de ProviderAPI
+        $offers = $this->getAllSkuOffers($sku);
+
+        // Aplicar tu criterio de selección para determinar la mejor oferta
+        $bestOffer = $this->selectBestOffer($offers);
+
+        // Devolver la información de la mejor oferta
+        return $bestOffer;
+    }
+
+    private function selectBestOffer($offers)
+    {
+        // Seleccionar la oferta con el precio más bajo
+        $bestOffer = null;
+        $lowestPrice = PHP_INT_MAX;
+
+        foreach ($offers as $offer) {
+            if ($offer['price'] < $lowestPrice) {
+                $bestOffer = $offer;
+                $lowestPrice = $offer['price'];
+            }
+        }
+
+        return $bestOffer;
+    }
+
     private function processResponse($response)
     {
         $responseData = json_decode($response, true);

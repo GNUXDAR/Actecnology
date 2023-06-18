@@ -23,27 +23,30 @@
 
 <div class="offer-container">
     <h2>Ofertas disponibles</h2>
-    <?php if ($offers && count($offers) > 0) :
-    ?>
+    <?php if ($offers && count($offers) > 0) : ?>
         <ul>
-            <?php foreach ($offers as $offer) : ?>
-                <?php if ($offer['stock'] > 0) : // validar si hay stock ?>
+            <?php //foreach ($offers as $offer) : ?>
+            <!--    usar el foreach con $offer getAllSkuOffers en el controller idex.php    -->
+                <?php //if ($offer['stock'] > 0) : // validar si hay stock ?> 
+                <?php //echo('<pre>'); var_dump($offers); die(); echo ('</pre>') ?>
+
+                <?php if (isset($offers['stock']) && $offers['stock'] > 0) : // validar si hay stock?>                <?php //if (isset($offer)) : // validar si hay stock?>
                     <li>
-                        <h3>ID: <?= $offer['id'] ?></h3>
-                        <p>Precio: <?= $offer['price'] ?></p>
-                        <p>Stock: <?= $offer['stock'] ?></p>
-                        <p>Precio de envío: <?= $offer['shipping_price'] ?></p>
-                        <p>Fecha de entrega: <?= $offer['delivery_date'] ?></p>
-                        <p>Puede ser devuelto: <?= $offer['can_be_refunded'] ? 'Sí' : 'No' ?></p>
-                        <p>Estado: <?= $offer['status'] ?></p>
-                        <p>Garantía: <?= $offer['guarantee'] ? 'Sí' : 'No' ?></p>
-                        <p>Vendedor: <?= $offer['seller']['name'] ?></p>
-                        <p>Calificación del vendedor: <?= $offer['seller']['qualification'] ?></p>
-                        <p>Cantidad de calificaciones: <?= $offer['seller']['reviews_quantity'] ?></p>
+                        <h3>ID: <?= $offers['id']; ?></h3>
+                        <p>Precio: <?= $offers['price'] ?></p>
+                        <p>Stock: <?= $offers['stock'] ?></p>
+                        <p>Precio de envío: <?= $offers['shipping_price'] ?></p>
+                        <p>Fecha de entrega: <?= $offers['delivery_date'] ?></p>
+                        <p>Puede ser devuelto: <?= $offers['can_be_refunded'] ? 'Sí' : 'No' ?></p>
+                        <p>Estado: <?= $offers['status'] ?></p>
+                        <p>Garantía: <?= $offers['guarantee'] ? 'Sí' : 'No' ?></p>
+                        <p>Vendedor: <?= $offers['seller']['name'] ?></p>
+                        <p>Calificación del vendedor: <?= $offers['seller']['qualification'] ?></p>
+                        <p>Cantidad de calificaciones: <?= $offers['seller']['reviews_quantity'] ?></p>
                     </li>
                     <?php //break; // detener si existe una ?> 
                 <?php endif; ?>
-            <?php endforeach; ?>
+            <?php //endforeach; ?>
 
         </ul>
     <?php else :

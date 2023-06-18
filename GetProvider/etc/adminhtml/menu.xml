@@ -11,7 +11,7 @@
         />
 		<add 
             id="Actecnology_GetProvider::index" 
-            title="Index" 
+            title="Resumen de ventas" 
             module="Actecnology_GetProvider" 
             sortOrder="61" 
             parent="Actecnology_GetProvider::actecnologybackend" 

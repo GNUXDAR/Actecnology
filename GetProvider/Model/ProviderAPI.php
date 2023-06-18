@@ -2,26 +2,33 @@
 
 namespace Actecnology\GetProvider\Model;
 
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\HTTP\Client\Curl;
+use Magento\Framework\Serialize\Serializer\Json;
 class ProviderAPI
 {
-    protected $httpClient;
+    protected $curl;
 
     public function __construct(
-        \Magento\Framework\HTTP\ClientInterface $httpClient
+        Curl $curl
     ) {
-        $this->httpClient = $httpClient;
+        $this->curl = $curl;
     }
 
     public function getAllSkuOffers($sku)
     {
         $apiUrl = 'http://127.0.0.1:8000/getAllSkuOffers/' . $sku;
-        $this->httpClient->get($apiUrl);
 
-        $response = $this->httpClient->getBody();
+        // llamda a ala API
+        $this->curl->get($apiUrl);
+        $response = $this->curl->getBody();
 
         // Procesa la respuesta de la API y devuelve los datos en el formato adecuado
         $offers = $this->processResponse($response);
-
+        // echo "<pre>";
+        // var_dump($offers);
+        // echo "</pre>";
+        // die("aqui");
         return $offers;
     }
 

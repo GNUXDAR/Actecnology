@@ -17,6 +17,7 @@ app
 
 # Nota
 Es una prueba tecnica interesante!
+http://magento.test/getprovider
 
 # RQ
 [PDF](https://github.com/GNUXDAR/Actecnology/blob/main/GetProvider/RQ.pdf)  

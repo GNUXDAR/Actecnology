@@ -52,10 +52,13 @@ class ProviderAPI
         $lowestPrice = PHP_INT_MAX;
 
         foreach ($offers as $offer) {
-            if ($offer['price'] < $lowestPrice) {
-                $bestOffer = $offer;
-                $lowestPrice = $offer['price'];
+            if ($offer['stock'] > 0) {
+                if ($offer['price'] < $lowestPrice) {
+                    $bestOffer = $offer;
+                    $lowestPrice = $offer['price'];
+                }
             }
+
         }
 
         return $bestOffer;

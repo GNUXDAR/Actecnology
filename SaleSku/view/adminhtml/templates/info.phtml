@@ -1,0 +1,35 @@
+<?php
+
+// Obtener la información de ventas desde el servicio o modelo correspondiente
+$sales = $this->getSalesInformation();
+?>
+
+<div class="sales-info">
+    <!-- <h1>Sales SKU Information</h1> -->
+
+    <?php if (!empty($sales)) : ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Offer ID</th>
+                    <th>Quantity</th>
+                    <th>Order ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($sales as $sale) : ?>
+                    <tr>
+                        <td><?= $sale['sku'] ?></td>
+                        <td><?= $sale['offer_id'] ?></td>
+                        <td><?= $sale['quantity'] ?></td>
+                        <td><?= $sale['order_id'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php else : ?>
+        <p>No hay ventas disponibl.</p>
+    <?php endif; ?>
+
+</div>

@@ -11,7 +11,6 @@ use \Magento\Framework\App\Action\Context;
 use \Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Actecnology\GetProvider\Model\ProviderAPI;
-use Actecnology\GetProvider\Model\BestOfferService;
 
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -22,17 +21,14 @@ class Index extends \Magento\Framework\App\Action\Action
     
     protected $resultPageFactory;
     protected $providerAPI;
-    // protected $bestOfferService;
 
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         ProviderAPI $providerAPI
-        // BestOfferService $bestOfferService
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->providerAPI = $providerAPI;
-        // $this->bestOfferService = $bestOfferService;
         parent::__construct($context);
     }
 
@@ -45,7 +41,7 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         $resultPage = $this->resultPageFactory->create();
 
-        // Obtener la mejor oferta utilizando el servicio BestOfferService
+        // Obtener la mejor oferta
         $sku = '3'; // SKU del producto a consultar
         $offers = $this->providerAPI->getBestOffer($sku);
 

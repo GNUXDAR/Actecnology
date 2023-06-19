@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Actecnology Team
+ * Copyright ©  All rights reserved. 2023 Actecnology (https://actecnology.com/)
+ * @package Actecnology_SaleSku
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Actecnology_SaleSku" setup_version="1.0.0">
+    </module>
+</config>

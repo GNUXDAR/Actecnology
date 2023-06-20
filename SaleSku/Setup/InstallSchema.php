@@ -9,6 +9,11 @@ use Magento\Framework\DB\Ddl\Table;
 
 class InstallSchema implements InstallSchemaInterface
 {
+    // public function getVersion()
+    // {
+    //     return '1.0.1'; 
+    // }
+
     public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
         $installer = $setup;
@@ -77,11 +82,46 @@ class InstallSchema implements InstallSchemaInterface
             $installer->getConnection()->createTable($table);
         }
 
-        $installer->endSetup();
-    }
+        if (!$installer->tableExists('actecnology_daily_sales_report')) {
+            $table = $installer->getConnection()
+                ->newTable($installer->getTable('actecnology_daily_sales_report'))
+                ->addColumn(
+                    'id',
+                    Table::TYPE_INTEGER,
+                    null,
+                    ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+                    'ID'
+                )
+                ->addColumn(
+                    'date',
+                    Table::TYPE_DATE,
+                    null,
+                    ['nullable' => false],
+                    'Date'
+                )
+                ->addColumn(
+                    'sku',
+                    Table::TYPE_TEXT,
+                    255,
+                    ['nullable' => false],
+                    'SKU'
+                )
+                ->addColumn(
+                    'total_sales',
+                    Table::TYPE_INTEGER,
+                    null,
+                    ['nullable' => false],
+                    'Total Sales'
+                )
+                ->addIndex(
+                    $installer->getIdxName('actecnology_daily_sales_report', ['date', 'sku']),
+                    ['date', 'sku']
+                )
+                ->setComment('Actecnology Daily Sales Report Table');
 
-    // public function getVersion()
-    // {
-    //     return '1.0.1'; // Reemplazar con la versión correcta del módulo
-    // }
+            $installer->getConnection()->createTable($table);
+        }
+
+        $installer->endSetup();
+    }    
 }

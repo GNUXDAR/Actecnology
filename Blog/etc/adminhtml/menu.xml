@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Actecnology_Blog::actecnology_blog" title="AC Tecnology" module="Actecnology_Blog" parent="Magento_Backend::content" sortOrder="10" resource="Actecnology_Blog::actecnology_blog"/>
+        <add id="Actecnology_Blog::blog" title="Blog" module="Actecnology_Blog" parent="Actecnology_Blog::actecnology_blog" sortOrder="10" action="actecnology_blog/post/index" resource="Actecnology_Blog::blog"/>
+    </menu>
+</config>

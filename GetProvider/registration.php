@@ -1,8 +1,10 @@
 <?php
+
 /**
  * @author Actecnology Team (https://actecnology.com/)
  * Copyright ©  All rights reserved.
- * Arturo Cabrera
+ * Dev: Arturo Cabrera
+ * Mail: arturo.actecnology@gmail.com
  */
 
 use Magento\Framework\Component\ComponentRegistrar;

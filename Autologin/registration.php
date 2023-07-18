@@ -1,12 +1,14 @@
 <?php
 /**
  * @author Actecnology Team
- * @copyright Copyright (c) 2016 Actecnology (https://actecnologies.com/)
- * @package Actecnology_Customerattributes
+ * @copyright Copyright (c) Actecnology (https://actecnology.com/)
+ * @package Actecnology_Autologin
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
     'Actecnology_Autologin',
     __DIR__
 );

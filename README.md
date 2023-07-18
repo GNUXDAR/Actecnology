@@ -6,6 +6,7 @@
 
 Modulos creados con 💗 para magento2
 Magento ver. 2.4.3-p1
+Revisiones ver. 2.4.6-p1
 
 [Autologin](https://github.com/GNUXDAR/magento2_code/tree/main/Autologin)  Se autologues sin tener que escribir la contraseña  
 

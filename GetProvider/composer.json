@@ -1,0 +1,23 @@
+  "name": "actecnology/getprovider",
+  "description": "Magento 2 GetProvider Module",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Arturo Cabrera",
+      "email": "arturo.actecnology@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Actecnology\\GetProvider\\": ""
+    }
+  }
+}

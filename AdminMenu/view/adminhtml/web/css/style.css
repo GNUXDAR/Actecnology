@@ -1,0 +1,7 @@
+.admin__menu .level-0.item-adminmenu>a:before {
+    font-family: 'adminmenu';
+    content: url('../images/logo.svg');
+    height: 28px;
+    margin: 0 auto;
+    width: 30px;
+}

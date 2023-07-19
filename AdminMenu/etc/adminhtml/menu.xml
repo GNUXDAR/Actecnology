@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- agregar menu en la seccion principal -->
+        <add id="Actecnology_AdminMenu::ac_menu_admin" title="AC Tecnology" module="Actecnology_AdminMenu" sortOrder="10" resource="Actecnology_AdminMenu::ac_menu_admin"/>
+        <add id="Actecnology_AdminMenu::configuration" title="Configuration" module="Actecnology_AdminMenu" sortOrder="99" parent="Actecnology_AdminMenu::ac_menu_admin" action="adminhtml/system_config/edit/section/actecnology" resource="Actecnology_AdminMenu::actecnology_configuration"/>
+      </menu>
+</config>

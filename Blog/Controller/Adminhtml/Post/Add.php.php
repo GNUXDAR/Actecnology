@@ -6,8 +6,6 @@ use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\PageFactory;
 
-use Psr\Log\LoggerInterface;
-
 
 class Add extends Action
 {

@@ -30,6 +30,6 @@ class Index extends Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Actecnology_Blog::ac_blog');
+        return $this->_authorization->isAllowed('Actecnology_Blog::actecnology_blog');
     }
 }

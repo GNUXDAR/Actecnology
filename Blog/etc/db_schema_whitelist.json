@@ -1,0 +1,12 @@
+{
+    "actecnology_blog_post": {
+        "column": {
+            "post_id": true,
+            "title": true,
+            "content": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

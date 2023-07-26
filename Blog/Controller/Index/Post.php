@@ -22,7 +22,7 @@ class Post extends Action
         $post = $this->postFactory->create();
 
         $post->setTitle('AC Tecnology');
-        $post->setContent('Soluciones Informaticas.');
+        $post->setContent('"Transformando sueños en soluciones tecnológicas"');
 
         $post->save();
         $this->getResponse()->setBody('Yes Success');

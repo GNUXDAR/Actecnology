@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author AC TEcnology Team (https://actecnology.com/)
+ * @author AC Tecnology Team (https://actecnology.com/)
  * Copyright ©  All rights reserved.
  * Dev: Arturo Cabrera
  * mail: gnuxdar@gmail.com

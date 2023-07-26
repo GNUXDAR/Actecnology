@@ -18,7 +18,7 @@
         <item name="template" xsi:type="string">templates/form/collapsible</item>
     </argument>
 
-    <dataSource name="uiexample_form_data_source">
+    <dataSource name="uisave_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Actecnology\Blog\Model\DataProvider</argument>
             <argument name="name" xsi:type="string">actecnology_blog_form_data_source</argument>

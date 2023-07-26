@@ -11,16 +11,16 @@ use Actecnology\Blog\Model\Post;
 class Save extends Action
 {
 
-    protected $uiExamplemodel;
+    protected $uiSaveModel;
     protected $adminsession;
 
     public function __construct(
         Action\Context $context,
-        Post $uiExamplemodel,
+        Post $uiSaveModel,
         Session $adminsession
     ) {
         parent::__construct($context);
-        $this->uiExamplemodel = $uiExamplemodel;
+        $this->uiSaveModel = $uiSaveModel;
         $this->adminsession = $adminsession;
     }
 
@@ -32,18 +32,18 @@ class Save extends Action
         if ($data) {
             $post_id = $this->getRequest()->getParam('post_id');
             if ($post_id) {
-                $this->uiExamplemodel->load($post_id);
+                $this->uiSaveModel->load($post_id);
             }
-            $this->uiExamplemodel->setData($data);
+            $this->uiSaveModel->setData($data);
             try {
-                $this->uiExamplemodel->save();
+                $this->uiSaveModel->save();
                 $this->messageManager->addSuccess(__(''));
                 $this->adminsession->setFormData(false);
                 if ($this->getRequest()->getParam('back')) {
                     if ($this->getRequest()->getParam('back') == 'add') {
                         return $resultRedirect->setPath('*/*/add');
                     } else {
-                        return $resultRedirect->setPath('*/*/edit', ['post_id' => $this->uiExamplemodel->getPostId(), '_current' => true]);
+                        return $resultRedirect->setPath('*/*/edit', ['post_id' => $this->uiSaveModel->getPostId(), '_current' => true]);
                     }
                 }
                 return $resultRedirect->setPath('*/*/');

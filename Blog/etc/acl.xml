@@ -3,8 +3,8 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Magento_Backend::content">
-                    <resource id="Actecnology_Blog::actecnology_blog" title="AC Tecnology" sortOrder="10">
+                <resource id="Magento_Blog::blog" title="AC Tecnology - Blog">
+                    <resource id="Actecnology_Blog::actecnology_blog" title="Manage Posts" sortOrder="10">
                         <resource id="Actecnology_Blog::blog" title="Blog" sortOrder="10"/>
                     </resource>
                 </resource>

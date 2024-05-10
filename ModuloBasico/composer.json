@@ -1,17 +1,23 @@
+{
   "name": "actecnology/modulobasico",
   "description": "Magento 2 ModuloBasico Module",
   "type": "magento2-module",
-  "version": "1.0.0",
-  "license": [
-    "OSL-3.0",
-    "AFL-3.0"
-  ],
+  "license": "MIT",
   "authors": [
     {
       "name": "Arturo Cabrera",
-      "email": "arturo.actecnology@gmail.com"
+      "homepage": "https://arturocabrera.com/",
+      "email": "gnuxdar@gmail.com"
+    },
+    {
+      "name": "AC Tecnology",
+      "homepage": "https://actecnology.com/"
     }
   ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.1"
+  },
   "autoload": {
     "files": [
       "registration.php"
